@@ -21,6 +21,20 @@
         app:layout_constraintGuide_percent="0.5" />
 
     <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineMiddleV2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.65" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineMiddleV3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineRight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -48,13 +62,31 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.5" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="peepee"
-        app:layout_constraintBottom_toTopOf="@+id/guidelineMiddleH"
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineMiddleH6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <Button
+        android:id="@+id/buttonSavedContent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Saved"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineBottom"
         app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
+        app:layout_constraintStart_toStartOf="@+id/guidelineMiddleV2"
+        app:layout_constraintTop_toTopOf="@+id/guidelineMiddleH6" />
+
+    <Button
+        android:id="@+id/buttonCapture"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Capture"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineBottom"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineMiddleV3"
         app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
-        app:layout_constraintTop_toTopOf="@+id/guidelineTop" />
+        app:layout_constraintTop_toTopOf="@+id/guidelineMiddleH6" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
