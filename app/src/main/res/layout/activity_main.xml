@@ -6,6 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/textViewLogo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#C57B64"
+        android:text="Crumble"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineLeft"
         android:layout_width="wrap_content"
@@ -47,6 +57,13 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineTop2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineBottom"
@@ -96,7 +113,18 @@
         app:layout_constraintBottom_toTopOf="@+id/guidelineMiddleH6"
         app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
         app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
-        app:layout_constraintTop_toTopOf="@+id/guidelineTop"
+        app:layout_constraintTop_toTopOf="@+id/guidelineTop2"
         app:layout_constraintVertical_bias="0.6" />
+
+    <TextView
+        android:id="@+id/textViewFeedTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FEED"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineTop2"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineMiddleV2"
+        app:layout_constraintStart_toStartOf="@+id/guidelineMiddleV3"
+        app:layout_constraintTop_toTopOf="@+id/guidelineTop" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -35,6 +35,11 @@ public class MainActivity extends Activity {
         feed = new ArrayList<Post>();
         feed.add(new Post("coolguy", "this is really cool"));
         feed.add(new Post("verynicedude", "this is very very very very very nice"));
+        feed.add(new Post("yo", "yoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooy"));
+        feed.add(new Post("awesomeperson", "this is awesome"));
+        feed.add(new Post("reallykindguy123", "awesomesauce"));
+        feed.add(new Post("funman", "this app is very fun"));
+
         adapter = new PostAdapter(feed);
         recyclerViewFeed.setAdapter(adapter);
 
