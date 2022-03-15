@@ -10,12 +10,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
 public class MainActivity extends Activity {
     Button buttonCapture;
     Button buttonSavedContent;
+    Button buttonSendPost;
+
+    EditText editTextPostWrite;
 
     RecyclerView recyclerViewFeed;
     PostAdapter adapter;
@@ -28,22 +33,27 @@ public class MainActivity extends Activity {
 
         buttonCapture = findViewById(R.id.buttonCapture);
         buttonSavedContent = findViewById(R.id.buttonSavedContent);
+        buttonSendPost = findViewById(R.id.buttonSendPost);
+
+        editTextPostWrite = findViewById(R.id.editTextPostWrite);
 
         recyclerViewFeed = findViewById(R.id.recyclerViewFeed);
         recyclerViewFeed.setLayoutManager(new LinearLayoutManager(this));
 
         feed = new ArrayList<Post>();
-        feed.add(new Post("coolguy", "this is really cool"));
-        feed.add(new Post("verynicedude", "this is very very very very very nice"));
-        feed.add(new Post("yo", "yoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooyyoyoyoyooy"));
-        feed.add(new Post("awesomeperson", "this is awesome"));
-        feed.add(new Post("reallykindguy123", "awesomesauce"));
-        feed.add(new Post("funman", "this app is very fun"));
+
 
         adapter = new PostAdapter(feed);
         recyclerViewFeed.setAdapter(adapter);
 
-
+        buttonSendPost.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                feed.add(0, new Post("Bob", editTextPostWrite.getText().toString()));
+                adapter.notifyDataSetChanged();
+                editTextPostWrite.setText("");
+            }
+        });
 
 
         buttonCapture.setOnClickListener(new View.OnClickListener() {
