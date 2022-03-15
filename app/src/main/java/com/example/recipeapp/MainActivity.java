@@ -32,7 +32,9 @@ public class MainActivity extends Activity {
         recyclerViewFeed = findViewById(R.id.recyclerViewFeed);
         recyclerViewFeed.setLayoutManager(new LinearLayoutManager(this));
 
-        feed = new ArrayList<>();
+        feed = new ArrayList<Post>();
+        feed.add(new Post("coolguy", "this is really cool"));
+        feed.add(new Post("verynicedude", "this is very very very very very nice"));
         adapter = new PostAdapter(feed);
         recyclerViewFeed.setAdapter(adapter);
 
